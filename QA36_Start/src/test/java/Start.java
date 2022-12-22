@@ -10,24 +10,44 @@ public class Start {
     @Test
     public void startTrello() {
         wd = new ChromeDriver();
-        //wd.navigate().to("https://trello.com/");
+        wd.navigate().to("https://trello.com/");
         wd.manage().window().maximize();
-        wd.get("https://trello.com/");
         wd.navigate().back();
         wd.navigate().forward();
         wd.navigate().refresh();
-        wd.manage().window().maximize();
-        //wd.close();
+
+        wd.close();
         wd.quit();
 
-
-        WebElement el1 = wd.findElement(By.tagName("div"));
-        WebElement el2 = wd.findElement(By.tagName("a"));
-        WebElement el3 = wd.findElement(By.id("user"));
-        WebElement el4 = wd.findElement(By.id("login-form"));
-        WebElement el5 = wd.findElement(By.className("username-readonly"));
-        WebElement el6 = wd.findElement(By.className("css-164r41r"));
-        //WebElement el7 = wd.findElement(By.className("username-readonly hidden"));
-        WebElement el8 = wd.findElement(By.linkText("Log in"));
     }
+
+    WebElement el1 = wd.findElement(By.tagName("div"));
+    WebElement el2 = wd.findElement(By.tagName("a"));
+    WebElement el3 = wd.findElement(By.id("user"));
+    WebElement el4 = wd.findElement(By.id("login-form"));
+    //WebElement el5= wd.findElement(By.className("username-readonly hidden"));
+    WebElement el6= wd.findElement(By.className("username-readonly"));
+    WebElement el7= wd.findElement(By.className("css-164r41r"));
+    WebElement el8 = wd.findElement(By.linkText("Log in"));
+    WebElement el9 = wd.findElement(By.className("m2N684FcksCyfT"));
+
+    WebElement el10 = wd.findElement(By.cssSelector("#user"));
+    WebElement el11 = wd.findElement(By.cssSelector(".username-readonly"));
+
+
+    WebElement log1 = wd.findElement(By.cssSelector("[href='/login']"));
+    WebElement log2 = wd.findElement(By.cssSelector("#user"));
+    WebElement log3 = wd.findElement(By.cssSelector("#login"));
+    WebElement log4 = wd.findElement(By.cssSelector("#already-have-an-account"));
+
+    WebElement log5 = wd.findElement(By.cssSelector("#password"));
+    WebElement log6 = wd.findElement(By.cssSelector("#login-submit"));
+
+    
+    WebElement log11 = wd.findElement(By.cssSelector("[aria-label='Trello']"));
+    WebElement log121 = wd.findElement(By.cssSelector("[aria-label $='llo']"));//ends
+    WebElement log31 = wd.findElement(By.cssSelector("[aria-label ^='Tr']"));//starts
+    WebElement log41 = wd.findElement(By.cssSelector("[aria-label *='rell']"));//contains
+
+
 }
